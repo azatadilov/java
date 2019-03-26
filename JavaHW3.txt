@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Home_work_for_lesson_3 {
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Внимание: У вас есть только 3 шанса угадать число!");
+        for (int i = 1; i < 3; i++) {
+
+        }
+        int range = 9;
+        int number = (int) (Math.random() * range);
+        while (true) {
+            System.out.println("Угадайте число от 0 до " + range);
+            int input_number = scanner.nextInt();
+            if (input_number == number) {
+                System.out.println("Вы угадали!!! Молодец!!!");
+                break;
+            } else if (input_number > number) {
+                System.out.println("Загаданное число меньше");
+            } else {
+                System.out.println("Загаданное число больше");
+            }
+        }
+        System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+        int input_number2 = scanner.nextInt();
+        if (input_number2 == 1) {
+            int range2 = 9;
+            int number2 = (int) (Math.random() * range);
+            while (true) {
+                System.out.println("Угадайте число от 0 до " + range2);
+                int input_number = scanner.nextInt();
+                if (input_number == number2) {
+                    System.out.println("Вы угадали!!! Молодец!!!");
+                    break;
+                } else if (input_number > number2) {
+                    System.out.println("Загаданное число меньше");
+                } else {
+                    System.out.println("Загаданное число больше");
+                }
+            }
+            scanner.close();
+        }
+    }
+}
