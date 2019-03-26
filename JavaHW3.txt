@@ -1,43 +1,43 @@
-import java.util.Scanner;
+п»їimport java.util.Scanner;
 
 public class Home_work_for_lesson_3 {
 
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Внимание: У вас есть только 3 шанса угадать число!");
+        System.out.println("Р’РЅРёРјР°РЅРёРµ: РЈ РІР°СЃ РµСЃС‚СЊ С‚РѕР»СЊРєРѕ 3 С€Р°РЅСЃР° СѓРіР°РґР°С‚СЊ С‡РёСЃР»Рѕ!");
         for (int i = 1; i < 3; i++) {
 
         }
         int range = 9;
         int number = (int) (Math.random() * range);
         while (true) {
-            System.out.println("Угадайте число от 0 до " + range);
+            System.out.println("РЈРіР°РґР°Р№С‚Рµ С‡РёСЃР»Рѕ РѕС‚ 0 РґРѕ " + range);
             int input_number = scanner.nextInt();
             if (input_number == number) {
-                System.out.println("Вы угадали!!! Молодец!!!");
+                System.out.println("Р’С‹ СѓРіР°РґР°Р»Рё!!! РњРѕР»РѕРґРµС†!!!");
                 break;
             } else if (input_number > number) {
-                System.out.println("Загаданное число меньше");
+                System.out.println("Р—Р°РіР°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ");
             } else {
-                System.out.println("Загаданное число больше");
+                System.out.println("Р—Р°РіР°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ");
             }
         }
-        System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+        System.out.println("РџРѕРІС‚РѕСЂРёС‚СЊ РёРіСЂСѓ РµС‰Рµ СЂР°Р·? 1 вЂ“ РґР° / 0 вЂ“ РЅРµС‚");
         int input_number2 = scanner.nextInt();
         if (input_number2 == 1) {
             int range2 = 9;
             int number2 = (int) (Math.random() * range);
             while (true) {
-                System.out.println("Угадайте число от 0 до " + range2);
+                System.out.println("РЈРіР°РґР°Р№С‚Рµ С‡РёСЃР»Рѕ РѕС‚ 0 РґРѕ " + range2);
                 int input_number = scanner.nextInt();
                 if (input_number == number2) {
-                    System.out.println("Вы угадали!!! Молодец!!!");
+                    System.out.println("Р’С‹ СѓРіР°РґР°Р»Рё!!! РњРѕР»РѕРґРµС†!!!");
                     break;
                 } else if (input_number > number2) {
-                    System.out.println("Загаданное число меньше");
+                    System.out.println("Р—Р°РіР°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ");
                 } else {
-                    System.out.println("Загаданное число больше");
+                    System.out.println("Р—Р°РіР°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ");
                 }
             }
             scanner.close();
