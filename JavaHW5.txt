@@ -1,0 +1,68 @@
+﻿public class Home_work_for_lesson_5 {
+
+    public static void main(String[] args) {
+
+        Person[] persArray = new Person[5];
+
+        persArray[0] = new Person("Jack Shephard", "Surgeon", "jackone@aol.com", 5554823, 30000, 48);
+        persArray[1] = new Person("John Lock", "Hunter", "jlock@yahoo.com", 5559091, 25000, 45);
+        persArray[2] = new Person("James Ford", "Policeman", "ford@police.com", 5558008, 15000, 30);
+        persArray[3] = new Person("Hugo Rayes", "CEO", "hugooo@mail.com", 5558888, 55000, 55);
+        persArray[4] = new Person("Charlie Pace", "Musican", "charliepace@gmail.com", 5557777, 30000, 24);
+
+        //            persArray[0].info();
+        //            persArray[1].info();
+        //            persArray[2].info();
+        //            persArray[3].info();
+        //            persArray[4].info();
+        for (int i = 0; i < persArray.length; i++) {
+            if (persArray[i].getAge() > 40) {
+                System.out.println(persArray[i].getName());
+            }
+        }
+    }
+
+}
+
+
+// с этой стороки в окне person
+
+public class Person {
+
+    String name;
+    String position;
+    String email;
+    int phoneNumber;
+    int salary;
+    int age;
+
+    public Person(String name, String position, String email, int phoneNumber, int salary, int age) {
+        this.name = name;
+        this.position = position;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.salary = salary;
+        this.age = age;
+
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void getAge(int age) {
+        if (age < 0) {
+            System.out.println("Возраст не может быть отрицательным");
+        } else {
+            this.age = age;
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void info() {
+        System.out.println("Имя: " + name + ", должность: " + position + ", эл.почта: " + email + ", номер телефона: " + phoneNumber + ", зарплата: " + salary + ", возраст: " + age);
+    }
+}
